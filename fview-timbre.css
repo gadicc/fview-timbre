@@ -1,0 +1,19 @@
+.strip {
+	background: black;
+	color: white;
+	font-size: 26px;
+	line-height: 45px;
+	font-family: verdana;
+	border-bottom: 2px solid white;
+	padding-left: 80px;
+}
+
+.icon {
+	color: white;
+	font-size: 26px;
+	font-family: verdana;
+}
+
+.main {
+	background: #dfdfdf;
+}

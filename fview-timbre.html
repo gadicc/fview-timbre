@@ -1,0 +1,41 @@
+<head>
+  <title>fview-timbre</title>
+</head>
+
+
+<template name="famousInit">
+	{{> menu}}
+	{{>Surface template="main" class="main"
+		size="[undefined,undefined]" translate=menuTranslate}}
+</template>
+
+<template name="menu">
+	{{#SequentialLayout id="menu" size="[400,500]" translate="[0,35]"}}
+		{{>strip icon="X" text="SEARCH"}}
+		{{>strip icon="X" text="STARRED"}}
+		{{>strip icon="X" text="FRIENDS"}}
+		{{>strip icon="X" text="SETTINGS"}}
+	{{/SequentialLayout}}
+</template>
+
+<!-- Here we use a regular Meteor template to create a reusable "strip" -->
+<template name="strip">
+	{{#View size="[undefined,50]"}}
+
+		{{!-- Background and text --}}
+		{{#Surface class="strip" size="[undefined,50]" rotateZ="-10" skewZ="-10"}}
+			{{text}}
+		{{/Surface}}
+
+		{{!-- Icon (which is not rotated/skewed) --}}
+		{{#Surface class="icon" size="[50,50]" translate="[30,0]"}}
+			{{icon}}
+		{{/Surface}}
+
+	{{/View}}
+</template>
+
+<template name="main">
+	<p>Click me anywhere to see the menu effect (for now)</p>
+	<p>TODO: proper flick velocity, dragging, etc</p>
+</template>
