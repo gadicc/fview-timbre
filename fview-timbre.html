@@ -1,5 +1,6 @@
 <head>
   <title>fview-timbre</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 
 
@@ -11,10 +12,10 @@
 
 <template name="menu">
 	{{#SequentialLayout id="menu" size="[400,500]" translate="[0,35]"}}
-		{{>strip icon="X" text="SEARCH"}}
-		{{>strip icon="X" text="STARRED"}}
-		{{>strip icon="X" text="FRIENDS"}}
-		{{>strip icon="X" text="SETTINGS"}}
+		{{>strip icon="search" text="SEARCH"}}
+		{{>strip icon="star" text="STARRED"}}
+		{{>strip icon="group" text="FRIENDS"}}
+		{{>strip icon="cog" text="SETTINGS"}}
 	{{/SequentialLayout}}
 </template>
 
@@ -29,13 +30,14 @@
 
 		{{!-- Icon (which is not rotated/skewed) --}}
 		{{#Surface class="icon" size="[50,50]" translate="[30,0]"}}
-			{{icon}}
+			<i class="fa fa-{{icon}}"></i>
 		{{/Surface}}
 
 	{{/View}}
 </template>
 
 <template name="main">
+	<h1>Main App View</h1>
 	<p>Click me anywhere to see the menu effect (for now)</p>
 	<p>TODO: proper flick velocity, dragging, etc</p>
 </template>
